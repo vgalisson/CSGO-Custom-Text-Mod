@@ -16,8 +16,6 @@ def main():
 
     language, custom_lines = parse_lines(lines, debug=False)
 
-    print(language)
-
     # only non English file need to have all lines in it
     if language != "English":
         # then copy and replace from correct language file
@@ -66,7 +64,6 @@ def parse_lines(lines, debug=False):
     Returns:
         language : language of the file
         lines_dict : dict of the lines"""
-    inside_brackets = False
     lines_dict = {}
     language = "English"
     key = None
@@ -148,7 +145,7 @@ def setup_parser():
 
 def parse_args(parser):
     """Parse the cli arguments.
-    
+
     Returns:
         csgo : Path to csgo folder
         custom_path: Path to custom language file"""
