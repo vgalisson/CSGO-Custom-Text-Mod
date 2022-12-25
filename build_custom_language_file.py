@@ -12,6 +12,11 @@ def detectPlatformPath():
     if platform.system() == "Linux":
         print("Linux detected.")
         return Path(f"/home/{getpass.getuser()}/.local/share/Steam/steamapps/common/Counter-Strike Global Offensive")
+    elif platform.system() == "Darwin":
+        print("MacOS detected.")
+        print("Platform detection is not yet implemented for MacOS, please specify the path to your game.")
+        exit
+        #return Path(f"/home/{getpass.getuser()}/.local/share/Steam/steamapps/common/Counter-Strike Global Offensive")
     else:
         print("Windows detected.")
         return Path("C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive")
